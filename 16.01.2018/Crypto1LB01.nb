@@ -1,0 +1,1357 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     48164,       1348]
+NotebookOptionsPosition[     43219,       1178]
+NotebookOutlinePosition[     43642,       1194]
+CellTagsIndexPosition[     43599,       1191]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["\:041c\:0430\:0442\:0435\:043c\:0430\:0442\:0438\:0447\
+\:0435\:0441\:043a\:0438\:0435 \:043e\:0441\:043d\:043e\:0432\:044b \:0437\
+\:0430\:0449\:0438\:0442\:044b \:0438\:043d\:0444\:043e\:0440\:043c\:0430\
+\:0446\:0438\:0438 \n\:041b\:0430\:0431\:043e\:0440\:0430\:0442\:043e\:0440\
+\:043d\:0430\:044f \:0440\:0430\:0431\:043e\:0442\:0430 \:21161\n\:042d\:0444\
+\:0444\:0435\:043a\:0442\:0438\:0432\:043d\:044b\:0435 \:0438\:043d\:0441\
+\:0442\:0440\:0443\:043c\:0435\:043d\:0442\:044b \:0432 \:043a\:043e\:043b\
+\:044c\:0446\:0435 \:043a\:043b\:0430\:0441\:0441\:043e\:0432 \:0432\:044b\
+\:0447\:0435\:0442\:043e\:0432",
+ FontFamily->"Times New Roman"]], "Title",
+ CellChangeTimes->{{3.4746052435430593`*^9, 3.474605254448821*^9}, {
+  3.474605402410968*^9, 3.474605408332881*^9}, {3.6338856827891045`*^9, 
+  3.6338856856892705`*^9}, {3.695469770584587*^9, 3.6954697978501463`*^9}}],
+
+Cell["\<\
+\:0411\:0413\:0423, \:041c\:041c\:0424, \:041a\:0430\:0444. \
+\:0414\:0423\:0438\:0421\:0410, 
+ \:0434\:043e\:0446\:0435\:043d\:0442 \:0427\:0435\:0440\:0433\:0438\:043d\
+\:0435\:0446 \:0414.\:041d.\
+\>", "SmallText",
+ CellChangeTimes->{{3.632746338625765*^9, 3.6327464011153393`*^9}},
+ TextAlignment->Right,
+ TextJustification->0],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["\:0412\:043e\:0437\:0432\:0435\:0434\:0435\:043d\:0438\
+\:0435 \:0432 \:0441\:0442\:0435\:043f\:0435\:043d\:044c",
+ FontFamily->"Times New Roman"]], "Chapter",
+ CellChangeTimes->{{3.695469812143964*^9, 3.695469819399379*^9}}],
+
+Cell[TextData[{
+ "\:041f\:0443\:0441\:0442\:044c ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "\[Element]", "\[DoubleStruckCapitalN]"}], TraditionalForm]]],
+ ". \:041d\:0430 \:043c\:043d\:043e\:0436\:0435\:0441\:0442\:0432\:0435\n    ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[DoubleStruckCapitalZ]", "n"], ":=", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "1", ",", "2", ",", "\[Ellipsis]", ",", 
+      RowBox[{"n", "-", "1"}]}], "}"}]}], TraditionalForm]]],
+ " \n\:043e\:043f\:0440\:0435\:0434\:0435\:043b\:0435\:043d\:044b \
+\:0434\:0432\:0435 \:043e\:043f\:0435\:0440\:0430\:0446\:0438\:0438: \:0441\
+\:043b\:043e\:0436\:0435\:043d\:0438\:0435 \:0438 \:0443\:043c\:043d\:043e\
+\:0436\:0435\:043d\:0438\:0435. \:041e\:043d\:0438 \:043e\:043f\:0440\:0435\
+\:0434\:0435\:043b\:044f\:044e\:0442\:0441\:044f \:043f\:0440\:0438 \:043f\
+\:043e\:043c\:043e\:0449\:0438 \:043e\:043f\:0435\:0440\:0430\:0446\:0438\
+\:0439 \:0441\:043b\:043e\:0436\:0435\:043d\:0438\:044f, \:0443\:043c\:043d\
+\:043e\:0436\:0435\:043d\:0438\:044f \:0438 \:0434\:0435\:043b\:0435\:043d\
+\:0438\:044f \:0441 \:043e\:0441\:0442\:0430\:0442\:043a\:043e\:043c \:0432 \
+\[DoubleStruckCapitalZ]:\n a+b:=a+b (mod n)\n a*b:=a*b (mod n)\n\:041e\:0434\
+\:043d\:0430 \:043e\:043f\:0435\:0440\:0430\:0446\:0438\:044f \:0432 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[DoubleStruckCapitalZ]", "n"], TraditionalForm]]],
+ " \:0432\:044b\:043f\:043e\:043b\:043d\:044f\:0435\:0442\:0441\:044f \:043f\
+\:0440\:0438 \:043f\:043e\:043c\:043e\:0449\:0438 \:0434\:0432\:0443\:0445 \
+\:0430\:0440\:0438\:0444\:043c\:0435\:0442\:0438\:0447\:0435\:0441\:043a\:0438\
+\:0445 \:043e\:043f\:0435\:0440\:0430\:0446\:0438\:0439 \:0432 \
+\[DoubleStruckCapitalZ]. \:042d\:0442\:043e \:0434\:043e\:0441\:0442\:0430\
+\:0442\:043e\:0447\:043d\:043e \:0431\:044b\:0441\:0442\:0440\:043e.\n\n\
+\:0415\:0441\:043b\:0438 \:043c\:044b \:0445\:043e\:0442\:0438\:043c ",
+ Cell[BoxData[
+  FormBox["d", TraditionalForm]]],
+ " \:0440\:0430\:0437 \:0441\:043b\:043e\:0436\:0438\:0442\:044c \:044d\:043b\
+\:0435\:043c\:0435\:043d\:0442 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", "\[Element]", 
+     SubscriptBox["\[DoubleStruckCapitalZ]", "n"]}], ","}], TraditionalForm]]],
+ " \:0442\:043e\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", "+", "a", "+", "\[Ellipsis]", "+", "a"}], "=", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", "1", "+", "\[Ellipsis]", "+", "1"}], ")"}], "a"}], 
+      "=", 
+      RowBox[{"d", " ", "a"}]}]}], ","}], TraditionalForm]]],
+ "\n\:0442\:043e \:0435\:0441\:0442\:044c ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", "-", "1"}], TraditionalForm]]],
+ " \:0441\:043b\:043e\:0436\:0435\:043d\:0438\:0435 \:0437\:0430\:043c\:0435\
+\:043d\:044f\:0435\:0442\:0441\:044f 1 \:0443\:043c\:043d\:043e\:0436\:0435\
+\:043d\:0438\:0435\:043c \:0431\:043b\:0430\:0433\:043e\:0434\:0430\:0440\
+\:044f \:0441\:0432\:043e\:0439\:0441\:0442\:0432\:0443 \:0434\:0438\:0441\
+\:0442\:0440\:0438\:0431\:0443\:0442\:0438\:0432\:043d\:043e\:0441\:0442\:0438\
+: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", 
+     RowBox[{"(", 
+      RowBox[{"b", "+", "c"}], ")"}]}], "=", 
+    RowBox[{"ab", "+", 
+     RowBox[{"ac", "."}]}]}], TraditionalForm]]],
+ " \n\n\:041a\:0430\:043a \:0436\:0435 \:0432\:044b\:0447\:0438\:0441\:043b\
+\:0438\:0442\:044c d \:0443\:043c\:043d\:043e\:0436\:0435\:043d\:0438\:0439?\n\
+",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", " ", "a", " ", "\[Ellipsis]", " ", "a"}], "=", 
+    SuperscriptBox["a", "d"], " "}], TraditionalForm]]],
+ "\n\n",
+ StyleBox["\:041d\:0430\:0438\:0432\:043d\:044b\:0439 \
+\:0430\:043b\:0433\:043e\:0440\:0438\:0442\:043c \:0432\:043e\:0437\:0432\
+\:0435\:0434\:0435\:043d\:0438\:044f \:0432 \:0441\:0442\:0435\:043f\:0435\
+\:043d\:044c.",
+  FontWeight->"Bold"],
+ "\n\:0412\:0445\:043e\:0434: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "\[Element]", "\[DoubleStruckCapitalZ]"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", ",", 
+    RowBox[{"n", "\[Element]", "\[DoubleStruckCapitalN]"}]}], 
+   TraditionalForm]]],
+ ".\n\:0412\:044b\:0445\:043e\:0434: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", "\[Element]", "\[DoubleStruckCapitalZ]"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"b", "\[Congruent]", 
+     RowBox[{
+      SuperscriptBox["a", "d"], "(", 
+      RowBox[{"mod", " ", "n"}], ")"}]}], ",", "  ", 
+    RowBox[{"0", "\[LessEqual]", "b", "<", "n"}]}], TraditionalForm]]],
+ ".\n1.  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", "=", "1."}], TraditionalForm]]],
+ "\n2. \:0414\:043b\:044f ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"i", ":=", "1"}], ",", "\[Ellipsis]", ",", "d"}], 
+   TraditionalForm]]],
+ " \:0432\:044b\:0447\:0438\:0441\:043b\:044f\:0435\:043c\n      ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", ":=", 
+    RowBox[{"a", " ", "b", "  ", 
+     RowBox[{"(", 
+      RowBox[{"mod", " ", "n"}], ")"}]}]}], TraditionalForm]]],
+ " \n3. \:0420\:0435\:0437\:0443\:043b\:044c\:0442\:0430\:0442: b. \n"
+}], "Text",
+ CellChangeTimes->{{3.6954698567275143`*^9, 3.6954702343851147`*^9}, {
+  3.695470269745137*^9, 3.695470499304267*^9}, {3.695470615880935*^9, 
+  3.695470634985028*^9}, {3.6954742444884796`*^9, 3.6954744009654293`*^9}, {
+  3.6954744607968516`*^9, 3.695474471418459*^9}, {3.69547452352444*^9, 
+  3.6954748811038923`*^9}, {3.6954753479285927`*^9, 3.695475462906169*^9}, {
+  3.6954755082827644`*^9, 3.695475530005007*^9}, {3.6954755822489953`*^9, 
+  3.6954756387312255`*^9}, {3.695475844891017*^9, 3.6954758609509363`*^9}, {
+  3.6954758951468916`*^9, 3.6954759094937124`*^9}, {3.695475959514573*^9, 
+  3.695475968078063*^9}, {3.6955338130019407`*^9, 3.695533839706435*^9}, {
+  3.6955341516002665`*^9, 3.6955341524832892`*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell["\:0417\:0430\:0434\:0430\:043d\:0438\:0435 1.", "Subsection"],
+
+Cell["\<\
+\:0420\:0435\:0430\:043b\:0438\:0437\:043e\:0432\:0430\:0442\:044c \:041d\
+\:0430\:0438\:0432\:043d\:044b\:0439 \:0430\:043b\:0433\:043e\:0440\:0438\
+\:0442\:043c \:0432\:043e\:0437\:0432\:0435\:0434\:0435\:043d\:0438\:044f \
+\:0432 \:0441\:0442\:0435\:043f\:0435\:043d\:044c. \:0421\:0440\:0430\:0432\
+\:043d\:0438\:0442\:044c \:0435\:0433\:043e \:0440\:0435\:0437\:0443\:043b\
+\:044c\:0442\:0430\:0442\:044b \:0438 \:0441\:043a\:043e\:0440\:043e\:0441\
+\:0442\:044c \:0432\:044b\:0447\:0438\:0441\:043b\:0435\:043d\:0438\:0439 \
+\:0441 \:0444\:0443\:043d\:043a\:0446\:0438\:0435\:0439 PowerMod. \
+\:0421\:043a\:043e\:043b\:044c\:043a\:043e \:0430\:0440\:0438\:0444\:043c\
+\:0435\:0442\:0438\:0447\:0435\:0441\:043a\:0438\:0445 \:043e\:043f\:0435\
+\:0440\:0430\:0446\:0438\:0439 \:0432\:044b\:043f\:043e\:043b\:043d\:044f\
+\:0435\:0442\:0441\:044f \:043f\:0440\:0438 \:0440\:0430\:0431\:043e\:0442\
+\:0435 \:0434\:0430\:043d\:043d\:043e\:0433\:043e \:0430\:043b\:0433\:043e\
+\:0440\:0438\:0442\:043c\:0430? \:042f\:0432\:043b\:044f\:0435\:0442\:0441\
+\:044f \:043b\:0438 \:043e\:043d \:043f\:043e\:043b\:0438\:043d\:043e\:043c\
+\:0438\:0430\:043b\:044c\:043d\:044b\:043c?\
+\>", "Text",
+ CellChangeTimes->{{3.6954759334850845`*^9, 3.6954759444827137`*^9}, {
+   3.6954759803417645`*^9, 3.6954761163395433`*^9}, 3.6955340027984524`*^9},
+ FontSize->18],
+
+Cell[TextData[{
+ "\n",
+ StyleBox["\:0411\:044b\:0441\:0442\:0440\:044b\:0439 \
+\:0430\:043b\:0433\:043e\:0440\:0438\:0442\:043c \:0432\:043e\:0437\:0432\
+\:0435\:0434\:0435\:043d\:0438\:044f \:0432 \:0441\:0442\:0435\:043f\:0435\
+\:043d\:044c.",
+  FontWeight->"Bold"],
+ "\n\:0412\:0445\:043e\:0434: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "\[Element]", "\[DoubleStruckCapitalZ]"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", ",", 
+    RowBox[{"n", "\[Element]", "\[DoubleStruckCapitalN]"}]}], 
+   TraditionalForm]]],
+ ".\n\:0412\:044b\:0445\:043e\:0434: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", "\[Element]", "\[DoubleStruckCapitalZ]"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"b", "\[Congruent]", 
+     RowBox[{
+      SuperscriptBox["a", "d"], "(", 
+      RowBox[{"mod", " ", "n"}], ")"}]}], ",", "  ", 
+    RowBox[{"0", "\[LessEqual]", "b", "<", "n"}]}], TraditionalForm]]],
+ ".\n1. \:041f\:0440\:0435\:0434\:0441\:0442\:0430\:0432\:043b\:044f\:0435\
+\:043c ",
+ Cell[BoxData[
+  FormBox["d", TraditionalForm]]],
+ " \:0432 \:0434\:0432\:043e\:0438\:0447\:043d\:043e\:0439 \:0441\:0438\:0441\
+\:0442\:0435\:043c\:0435 \:0441\:0447\:0438\:0441\:043b\:0435\:043d\:0438\
+\:044f \n      ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"d", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SubscriptBox["d", "0"], 
+         SuperscriptBox["2", "k"]}], "+", 
+        RowBox[{
+         SubscriptBox["d", "1"], 
+         SuperscriptBox["2", 
+          RowBox[{"k", "-", "1"}]]}], "+"}], "..."}], "+", 
+      SubscriptBox["d", "k"]}]}], ","}], TraditionalForm]]],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["d", "0"], "=", "1"}], TraditionalForm]]],
+ " (IntegerDigits).\n2. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", "=", "1."}], TraditionalForm]]],
+ "\n3. \:0414\:043b\:044f ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"i", ":=", "1"}], ",", "\[Ellipsis]", ",", "k"}], 
+   TraditionalForm]]],
+ " \:0432\:044b\:0447\:0438\:0441\:043b\:044f\:0435\:043c\n      ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"b", ":=", 
+    RowBox[{
+     SuperscriptBox["b", "2"], 
+     SuperscriptBox["a", 
+      SubscriptBox["d", "i"]], "  ", 
+     RowBox[{"(", 
+      RowBox[{"mod", " ", "n"}], ")"}]}]}], TraditionalForm]]],
+ " \n4. \:0420\:0435\:0437\:0443\:043b\:044c\:0442\:0430\:0442: b. "
+}], "Text",
+ CellChangeTimes->{{3.6954773756705728`*^9, 3.6954775542927895`*^9}, {
+  3.695534106526482*^9, 3.695534108704531*^9}, {3.6955341431241393`*^9, 
+  3.695534145943188*^9}},
+ FontSize->18]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0417\:0430\:0434\:0430\:043d\:0438\:0435 2.", "Subsection",
+ CellChangeTimes->{{3.695477568934627*^9, 3.695477568999631*^9}}],
+
+Cell["\<\
+\:0420\:0435\:0430\:043b\:0438\:0437\:043e\:0432\:0430\:0442\:044c \:0411\
+\:044b\:0441\:0442\:0440\:044b\:0439 \:0430\:043b\:0433\:043e\:0440\:0438\
+\:0442\:043c \:0432\:043e\:0437\:0432\:0435\:0434\:0435\:043d\:0438\:044f \
+\:0432 \:0441\:0442\:0435\:043f\:0435\:043d\:044c. \:0421\:0440\:0430\:0432\
+\:043d\:0438\:0442\:044c \:0435\:0433\:043e \:0440\:0435\:0437\:0443\:043b\
+\:044c\:0442\:0430\:0442\:044b \:0438 \:0441\:043a\:043e\:0440\:043e\:0441\
+\:0442\:044c \:0432\:044b\:0447\:0438\:0441\:043b\:0435\:043d\:0438\:0439 \
+\:0441 \:0444\:0443\:043d\:043a\:0446\:0438\:0435\:0439 PowerMod.  \:0421\
+\:043a\:043e\:043b\:044c\:043a\:043e \:0430\:0440\:0438\:0444\:043c\:0435\
+\:0442\:0438\:0447\:0435\:0441\:043a\:0438\:0445 \:043e\:043f\:0435\:0440\
+\:0430\:0446\:0438\:0439 \:0432\:044b\:043f\:043e\:043b\:043d\:044f\:0435\
+\:0442\:0441\:044f \:043f\:0440\:0438 \:0440\:0430\:0431\:043e\:0442\:0435 \
+\:0434\:0430\:043d\:043d\:043e\:0433\:043e \:0430\:043b\:0433\:043e\:0440\
+\:0438\:0442\:043c\:0430? \:042f\:0432\:043b\:044f\:0435\:0442\:0441\:044f \
+\:043b\:0438 \:043e\:043d \:043f\:043e\:043b\:0438\:043d\:043e\:043c\:0438\
+\:0430\:043b\:044c\:043d\:044b\:043c?\
+\>", "Text",
+ CellChangeTimes->{{3.6954759334850845`*^9, 3.6954759444827137`*^9}, {
+  3.6954759803417645`*^9, 3.6954761163395433`*^9}, {3.6954775800842648`*^9, 
+  3.6954775887327595`*^9}},
+ FontSize->18]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["\:0412\:044b\:0447\:0438\:0441\:043b\:0435\:043d\:0438\
+\:0435 \:043e\:0431\:0440\:0430\:0442\:043d\:044b\:0445 \:044d\:043b\:0435\
+\:043c\:0435\:043d\:0442\:043e\:0432",
+ FontFamily->"Times New Roman"]], "Chapter",
+ CellChangeTimes->{{3.6954776313791986`*^9, 3.6954776500932693`*^9}}],
+
+Cell[TextData[{
+ "\:0412 \:043a\:043e\:043b\:044c\:0446\:0435 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Z", "n"], TraditionalForm]]],
+ " \:043e\:0431\:0440\:0430\:0442\:043d\:044b\:0439  \:043e\:0442\:043d\:043e\
+\:0441\:0438\:0442\:0435\:043b\:044c\:043d\:043e \:0441\:043b\:043e\:0436\
+\:0435\:043d\:0438\:044f \:044d\:043b\:0435\:043c\:0435\:043d\:0442 \:0432\
+\:044b\:0447\:0438\:0441\:043b\:044f\:0435\:0442\:0441\:044f \:043b\:0435\
+\:0433\:043a\:043e, \:043d\:0430\:0434\:043e \:043f\:0435\:0440\:0435\:0434 \
+\:044d\:043b\:0435\:043c\:0435\:043d\:0442\:043e\:043c \:043f\:043e\:0441\
+\:0442\:0430\:0432\:0438\:0442\:044c \
+\[OpenCurlyDoubleQuote]\:043c\:0438\:043d\:0443\:0441\[CloseCurlyDoubleQuote].\
+ \:0422\:043e \:0435\:0441\:0442\:044c \:043e\:0431\:0440\:0430\:0442\:043d\
+\:044b\:0435 \:043e\:0442\:043d\:043e\:0441\:0438\:0442\:0435\:043b\:044c\
+\:043d\:043e \:0441\:043b\:043e\:0436\:0435\:043d\:0438\:044f \:044d\:043b\
+\:0435\:043c\:0435\:043d\:0442\:044b \:0432 \:043a\:043e\:043b\:044c\:0446\
+\:0430\:0445  ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["Z", "n"], TraditionalForm]]],
+ " \:0438 \[DoubleStruckCapitalZ] \:0441\:043e\:0432\:043f\:0430\:0434\:0430\
+\:044e\:0442.\n\n\:0410 \:043a\:0430\:043a \:043d\:0430\:0439\:0442\:0438 \
+\:043e\:0431\:0440\:0430\:0442\:043d\:044b\:0439 \:043e\:0442\:043d\:043e\
+\:0441\:0438\:0442\:0435\:043b\:044c\:043d\:043e \:0443\:043c\:043d\:043e\
+\:0436\:0435\:043d\:0438\:044f?  ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox["1", "a"], TraditionalForm]]],
+ " \:043d\:0435 \:044f\:0432\:043b\:044f\:0435\:0442\:0441\:044f \:0446\:0435\
+\:043b\:044b\:043c \:0447\:0438\:0441\:043b\:043e\:043c, \:043f\:043e\:044d\
+\:0442\:043e\:043c\:0443 \:043e\:043d \:043d\:0435 \:043f\:0440\:0435\:043d\
+\:0430\:0434\:043b\:0435\:0436\:0438\:0442 \:043c\:043d\:043e\:0436\:0435\
+\:0441\:0442\:0432\:0443 ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[DoubleStruckCapitalZ]", "n"], TraditionalForm]]],
+ ".\n\n",
+ StyleBox["\:0420\:0430\:0441\:0448\:0438\:0440\:0435\:043d\:043d\:044b\:0439 \
+\:0430\:043b\:0433\:043e\:0440\:0438\:0442\:043c \:0415\:0432\:043a\:043b\
+\:0438\:0434\:0430.",
+  FontWeight->"Bold"],
+ "\n",
+ StyleBox["\:0412\:0445\:043e\:0434.",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", ",", 
+    RowBox[{"b", "\[Element]", 
+     RowBox[{"\[DoubleStruckCapitalZ]", "."}]}]}], TraditionalForm]]],
+ "\n",
+ StyleBox["\:0412\:044b\:0445\:043e\:0434.\:0427\:0438\:0441\:043b\:0430",
+  FontSlant->"Italic"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"u", ",", 
+    RowBox[{"v", "\[Element]", "\[DoubleStruckCapitalZ]"}]}], 
+   TraditionalForm]]],
+ ", \:0443\:0434\:043e\:0432\:043b\:0435\:0442\:0432\:043e\:0440\:044f\:044e\
+\:0449\:0438\:0435 \:0443\:0441\:043b\:043e\:0432\:0438\:044e \n             ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"u", " ", "a"}], "+", 
+     RowBox[{"v", " ", "b"}]}], "=", 
+    RowBox[{
+     RowBox[{"\:041d\:041e\:0414", "(", 
+      RowBox[{"a", ",", "b"}], ")"}], "."}]}], TraditionalForm]]],
+ " \n1. \:0417\:0430\:0434\:0430\:0435\:043c \:043d\:0430\:0447\:0430\:043b\
+\:044c\:043d\:043e\:0435 \:0437\:043d\:0430\:0447\:0435\:043d\:0438\:0435 \
+\:043c\:0430\:0442\:0440\:0438\:0446\:044b ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"M", ":=", 
+    RowBox[{
+     RowBox[{"(", GridBox[{
+        {"1", "0"},
+        {"0", "1"}
+       }], ")"}], "."}]}], TraditionalForm]]],
+ "\n2. \:0414\:0435\:043b\:0438\:043c ",
+ Cell[BoxData[
+  FormBox["a", TraditionalForm]]],
+ " \:043d\:0430 ",
+ Cell[BoxData[
+  FormBox["b", TraditionalForm]]],
+ " \:0441 \:043e\:0441\:0442\:0430\:0442\:043a\:043e\:043c, \
+\:0432\:044b\:0447\:0438\:0441\:043b\:044f\:044f \:043f\:0440\:0438 \:044d\
+\:0442\:043e\:043c \:0447\:0438\:0441\:043b\:0430 ",
+ Cell[BoxData[
+  FormBox["q", TraditionalForm]]],
+ " \:0438 ",
+ Cell[BoxData[
+  FormBox["r", TraditionalForm]]],
+ " \:0442\:0430\:043a\:0438\:0435, \:0447\:0442\:043e ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "=", 
+    RowBox[{
+     RowBox[{"b", " ", "q"}], "+", "r"}]}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", "\[LessEqual]", "r", "<", "b"}], TraditionalForm]]],
+ ".\n3. \:0415\:0441\:043b\:0438 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"r", "=", "0"}], ","}], TraditionalForm]]],
+ " \:0442\:043e \:0432\:044b\:0434\:0430\:0435\:043c \:0440\:0435\:0437\:0443\
+\:043b\:044c\:0442\:0430\:0442 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"u", ":=", 
+    SubscriptBox["M", 
+     RowBox[{"1", ",", "2"}]]}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v", ":=", 
+    SubscriptBox["M", 
+     RowBox[{"2", ",", "2"}]]}], TraditionalForm]]],
+ ".\n4. \:0412\:044b\:043f\:043e\:043b\:043d\:044f\:0435\:043c \:0441\:043b\
+\:0435\:0434\:0443\:044e\:0449\:0438\:0435 \:043e\:043f\:0435\:0440\:0430\
+\:0446\:0438\:0438 \:043f\:0440\:0438\:0441\:0432\:0430\:0438\:0432\:0430\
+\:043d\:0438\:044f\n     ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"a", ":=", "b"}], ","}], TraditionalForm]]],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"b", ":=", "r"}], ","}], TraditionalForm]]],
+ "  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"M", ":=", 
+    RowBox[{"M", " ", "\[Cross]", 
+     RowBox[{"(", GridBox[{
+        {"0", "1"},
+        {"1", 
+         RowBox[{"-", "q"}]}
+       }], ")"}]}]}], TraditionalForm]]],
+ "\n   \:0438 \:043f\:0435\:0440\:0435\:0445\:043e\:0434\:0438\:043c \:043a \
+\:0448\:0430\:0433\:0443 2.\n"
+}], "Text",
+ CellChangeTimes->{{3.695477697267967*^9, 3.695477714942978*^9}, 
+   3.695477790552303*^9, {3.6954778689907894`*^9, 3.6954781584893475`*^9}, {
+   3.6954781993236833`*^9, 3.6954783006254773`*^9}, {3.695534225564576*^9, 
+   3.6955342688043747`*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell["\:0417\:0430\:0434\:0430\:043d\:0438\:0435 3.", "Subsection",
+ CellChangeTimes->{{3.6954785197670116`*^9, 3.695478519811014*^9}}],
+
+Cell["\<\
+\:0420\:0435\:0430\:043b\:0438\:0437\:043e\:0432\:0430\:0442\:044c \:0420\
+\:0430\:0441\:0448\:0438\:0440\:0435\:043d\:043d\:044b\:0439 \:0430\:043b\
+\:0433\:043e\:0440\:0438\:0442\:043c \:0415\:0432\:043a\:043b\:0438\:0434\
+\:0430. \:0421\:0440\:0430\:0432\:043d\:0438\:0442\:044c \:0435\:0433\:043e \
+\:0437\:043d\:0430\:0447\:0435\:043d\:0438\:044f \:0438 \:0441\:043a\:043e\
+\:0440\:043e\:0441\:0442\:044c \:0441\:043e \:0432\:0441\:0442\:0440\:043e\
+\:0435\:043d\:043d\:043e\:0439 \:0444\:0443\:043d\:043a\:0446\:0438\:0435\
+\:0439 ExtendedGCD. \:0421\:043a\:043e\:043b\:044c\:043a\:043e \:0430\:0440\
+\:0438\:0444\:043c\:0435\:0442\:0438\:0447\:0435\:0441\:043a\:0438\:0445 \
+\:043e\:043f\:0435\:0440\:0430\:0446\:0438\:0439 \:0432\:044b\:043f\:043e\
+\:043b\:043d\:044f\:0435\:0442\:0441\:044f \:043f\:0440\:0438 \:0440\:0430\
+\:0431\:043e\:0442\:0435 \:0434\:0430\:043d\:043d\:043e\:0433\:043e \:0430\
+\:043b\:0433\:043e\:0440\:0438\:0442\:043c\:0430? \:042f\:0432\:043b\:044f\
+\:0435\:0442\:0441\:044f \:043b\:0438 \:043e\:043d \:043f\:043e\:043b\:0438\
+\:043d\:043e\:043c\:0438\:0430\:043b\:044c\:043d\:044b\:043c?\
+\>", "Text",
+ CellChangeTimes->{{3.6338877728966517`*^9, 3.633887829967916*^9}, {
+   3.695478444242692*^9, 3.69547847865666*^9}, 3.695478569694867*^9},
+ FontSize->18]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0417\:0430\:0434\:0430\:043d\:0438\:0435 4.", "Subsection",
+ CellChangeTimes->{{3.6954786140164022`*^9, 3.6954786270721493`*^9}}],
+
+Cell[TextData[{
+ "\:041d\:0430\:0439\:0442\:0438 \:043e\:0431\:0440\:0430\:0442\:043d\:044b\
+\:0435 \:043e\:0442\:043d\:043e\:0441\:0438\:0442\:0435\:043b\:044c\:043d\
+\:043e \:0443\:043c\:043d\:043e\:0436\:0435\:043d\:0438\:044f \:043a \:044d\
+\:043b\:0435\:043c\:0435\:043d\:0442\:0430\:043c ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", ",", "b"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \:0432 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[DoubleStruckCapitalZ]", "n"], "."}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \:0412\:0430\:0440\:0438\:0430\:043d\:0442 \:0441\:043e\:043e\:0442\:0432\
+\:0435\:0442\:0441\:0442\:0432\:0443\:0435\:0442 \:043d\:043e\:043c\:0435\
+\:0440\:0443 \:043f\:043e \:043f\:043e\:0440\:044f\:0434\:043a\:0443 \:0432 \
+\:0441\:043f\:0438\:0441\:043a\:0435 \:0433\:0440\:0443\:043f\:043f\:044b."
+}], "Text",
+ CellChangeTimes->{{3.6954786368187065`*^9, 3.6954786598810253`*^9}, {
+  3.6954792693738866`*^9, 3.695479376304003*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 1.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804102171392`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "81738039272377107000878275573134567624963785207977187058226559"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "876233513322246749070"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "876233513322246749069"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804102391405`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 2.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410266142*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "39808151119322131785747793444362634574581942083819892189256483"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "411440980078340169668"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "822881960156680339334"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480410288143*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 3.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804103101444`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "42530430997171493050900585519445269701954006270353944787367883"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "949014432282168334172"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "2847043296846505002513"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804103321457`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 4.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804103531466`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "35459992721544354785715249221046278454199138559882607232829201"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "566039543579378256878"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "2264158174317513027508"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480410374148*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 5.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410397149*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "13002857807843858464669040426261228547057414817675387256488757"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "378917922524737299158"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "1894589612623686495785"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804104191504`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 6.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410441152*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "64379125679935601500126366035066747556617528509632937105750023"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "645840814769167326150"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "3875044888615003956894"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480410463153*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 7.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804104861546`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "20045708585865955660213022829072889554191229638319633243821057"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "901480155968370741128"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "6310361091778595187889"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804105061555`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 8.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410527157*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "11905840358176875711682298313000627696682551201654296777118461"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "620021803089318793334"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "4960174424714550346664"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804105481577`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 9.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410570159*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "58501495264800639193193337741681589041573082234884137131120573"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "848213521594436588868"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "7633921694349929299803"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804105901604`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 10.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410610162*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "32946421985026591064523060984130894794949719662129187337278919"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "526055442762636220010"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "5260554427626362200090"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804106311626`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 11.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410652164*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "6163915323731147294698110907858026003852005377720903676547697"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "122715392064105490022"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "1349869312705160390231"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480410672165*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 12.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804106921663`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "18560454925223839457624702057698733195923763794508424224403919"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "820653162133553231024"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "9847837945602638772276"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804107121677`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 13.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804107341685`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "42721855203286046876292250968634916637932038121272806087670759"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "497449771875322305342"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "6466847034379189969433"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.69548041075517*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 14.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804107751713`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "31510933355937663252389769631313146201529107051330098655536281"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "968924285932190511984"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "13564940003050667167762"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804108001723`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 15.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410824174*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "12244866587819150235684138852338975289627299235084919078131169"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "135906582241477911300"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "2038598733622168669485"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480410847175*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 16.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804108711767`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "19780134831005342050357873749888967842103593113048963182160857"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "492863533668714550008"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "7885816538699432800112"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804108911777`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 17.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480410912179*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "17013776118728696823471513521217624493968588873485400856826827"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "212634445944772874822"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "3614785581061138871957"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804109341803`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 18.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804109581814`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "10564644807371925396880944418367020338368360662934948768068207"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "528069231880224397554"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "9505246173844039155954"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804109791827`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 19.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480411001184*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "22763452601748338492443591165849540952651182487528899453277989"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "245540946017857236842"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "4665277974339287499979"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480411021185*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 20.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804110411863`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "3042917355731656609173328407116358862818626495721018689925529"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "104359721296217369052"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "2087194425924347381020"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480411062187*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 21.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804110841885`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "30217503192145684150533321749115835063783637459045952862933223"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "538634338644613943682"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "11311321111536892817301"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.69548041110719*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 22.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804111271915`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "72415288262173907079618874819115833672550174546458489679096707"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "821458493997222446724"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "18072086867938893827906"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804111481924`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 23.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804111691933`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "16868698682364066857276154182365928459523355334084039580159641"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "451209539036302565934"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "10377819397834959016459"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804111881943`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 24.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480411209196*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "16605020514671605063429089802133799226509901645714786036530577"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "227117052846250426002"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "5450809268310010224024"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480411230197*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 25.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804112511983`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "20485405883864018269069291697980763801744700020092995608370319"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "331504044375583486322"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "8287601109389587158025"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804112721996`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 26.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.6954804112922006`*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "14014496297115849648011691126063848281063179660904018297357849"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "588428204404158172754"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "15299133314508112491578"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804113122015`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 27.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480411333203*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "8018290757495411335220650467191070432427417388239090445045269"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "250150366223336849508"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "6754059888030094936689"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480411354204*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 28.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480411375205*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "34870649235394053926905482588828005171306113920254326029063257"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "431870132911253871830"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "12092363721515108411212"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804113952065`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 29.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.695480411418208*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "33009130887663985695363629592845229672170633573547788832159983"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "695350303973704872128"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "20165158815237441291683"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.6954804114382086`*^9}]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["\:0412\:0430\:0440\:0438\:0430\:043d\:0442 30.", "Subsubsection",
+ GeneratedCell->True,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.69548041145821*^9},
+ PrivateCellOptions -> {$CellContext`DefaultCellGroupOpen -> False}],
+
+Cell[BoxData[{
+ RowBox[{"n", "=", 
+  "87978263925914151537501505660168748656430118752751313916741923"}], "\
+\[IndentingNewLine]", 
+ RowBox[{"a", "=", "960559254737896413912"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "28816777642136892417330"}]}], "Input",
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.695480411479211*^9}]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["\:041f\:0435\:0440\:0435\:043f\:043e\:043b\:043d\:0435\
+\:043d\:0438\:0435 \:043f\:0430\:043c\:044f\:0442\:0438 \:0443\:043c\:043d\
+\:043e\:0436\:0435\:043d\:0438\:0435\:043c",
+ FontFamily->"Times New Roman"]], "Chapter",
+ CellChangeTimes->{{3.6954819261769004`*^9, 3.6954819514259357`*^9}}],
+
+Cell[TextData[{
+ StyleBox["\:0410\:043b\:0433\:043e\:0440\:0438\:0442\:043c. \:041f\:0435\
+\:0440\:0435\:043f\:043e\:043b\:043d\:0435\:043d\:0438\:0435 \:043f\:0430\
+\:043c\:044f\:0442\:0438 \:0443\:043c\:043d\:043e\:0436\:0435\:043d\:0438\
+\:0435\:043c.",
+  FontWeight->"Bold"],
+ "\n\:0412\:0445\:043e\:0434.\n\:0412\:044b\:0445\:043e\:0434: \:043f\:0435\
+\:0440\:0435\:043f\:043e\:043b\:043d\:0435\:043d\:0438\:0435 \:043f\:0430\
+\:043c\:044f\:0442\:0438.\n1. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"a", "=", "2."}], TraditionalForm]]],
+ "\n2. \:041f\:043e\:043a\:0430 \:043d\:0435 \:0437\:0430\:043a\:043e\:043d\
+\:0447\:0438\:043b\:0430\:0441\:044c \:043f\:0430\:043c\:044f\:0442\:044c \
+\:0432\:044b\:0447\:0438\:0441\:043b\:044f\:0435\:043c\na=a a."
+}], "Text",
+ CellChangeTimes->{{3.695481997330327*^9, 3.6954821011114764`*^9}, {
+  3.6954821447375374`*^9, 3.695482194358608*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell["\:0417\:0430\:0434\:0430\:043d\:0438\:0435 5.", "Subsection",
+ CellChangeTimes->{{3.695484203591268*^9, 3.6954842171590443`*^9}}],
+
+Cell["\<\
+\:0420\:0435\:0430\:043b\:0438\:0437\:043e\:0432\:0430\:0442\:044c \:043f\
+\:0435\:0440\:0435\:043f\:043e\:043b\:043d\:0435\:043d\:0438\:0435 \:043f\
+\:0430\:043c\:044f\:0442\:0438 \:0443\:043c\:043d\:043e\:0436\:0435\:043d\
+\:0438\:0435\:043c, \:0438\:0441\:043f\:043e\:043b\:044c\:0437\:0443\:044f \
+\:0444\:0443\:043d\:043a\:0446\:0438\:044e MemoryConstrained. \:0411\:044b\
+\:0441\:0442\:0440\:043e \:043b\:0438 \:0440\:0430\:0431\:043e\:0442\:0430\
+\:0435\:0442 \:0434\:0430\:043d\:043d\:044b\:0439 \:0430\:043b\:0433\:043e\
+\:0440\:0438\:0442\:043c? \:042f\:0432\:043b\:044f\:0435\:0442\:0441\:044f \
+\:043b\:0438 \:043e\:043d \:043f\:043e\:043b\:0438\:043d\:043e\:043c\:0438\
+\:0430\:043b\:044c\:043d\:044b\:043c?\
+\>", "Text",
+ CellChangeTimes->{{3.69548422425745*^9, 3.695484355216941*^9}},
+ FontSize->18]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1350, 709},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 907, 12, 201, "Title"],
+Cell[1489, 36, 341, 8, 47, "SmallText"],
+Cell[CellGroupData[{
+Cell[1855, 48, 249, 3, 64, "Chapter"],
+Cell[2107, 53, 5834, 139, 538, "Text"],
+Cell[CellGroupData[{
+Cell[7966, 196, 67, 0, 49, "Subsection"],
+Cell[8036, 198, 1359, 20, 59, "Text"],
+Cell[9398, 220, 2594, 82, 258, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12029, 307, 133, 1, 49, "Subsection"],
+Cell[12165, 310, 1388, 21, 59, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13602, 337, 309, 4, 64, "Chapter"],
+Cell[13914, 343, 5722, 154, 457, "Text"],
+Cell[CellGroupData[{
+Cell[19661, 501, 135, 1, 49, "Subsection"],
+Cell[19799, 504, 1301, 19, 59, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21137, 528, 137, 1, 49, "Subsection"],
+Cell[21277, 531, 1019, 22, 35, "Text"],
+Cell[CellGroupData[{
+Cell[22321, 557, 232, 4, 39, "Subsubsection"],
+Cell[22556, 563, 349, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[22942, 576, 230, 4, 33, "Subsubsection"],
+Cell[23175, 582, 347, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[23559, 595, 232, 4, 33, "Subsubsection"],
+Cell[23794, 601, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[24181, 614, 232, 4, 33, "Subsubsection"],
+Cell[24416, 620, 348, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[24801, 633, 230, 4, 33, "Subsubsection"],
+Cell[25034, 639, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[25421, 652, 230, 4, 33, "Subsubsection"],
+Cell[25654, 658, 348, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[26039, 671, 232, 4, 33, "Subsubsection"],
+Cell[26274, 677, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[26661, 690, 230, 4, 33, "Subsubsection"],
+Cell[26894, 696, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27281, 709, 230, 4, 33, "Subsubsection"],
+Cell[27514, 715, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27901, 728, 231, 4, 33, "Subsubsection"],
+Cell[28135, 734, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[28522, 747, 231, 4, 33, "Subsubsection"],
+Cell[28756, 753, 347, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[29140, 766, 233, 4, 33, "Subsubsection"],
+Cell[29376, 772, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[29763, 785, 233, 4, 33, "Subsubsection"],
+Cell[29999, 791, 347, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[30383, 804, 233, 4, 33, "Subsubsection"],
+Cell[30619, 810, 351, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[31007, 823, 231, 4, 33, "Subsubsection"],
+Cell[31241, 829, 348, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[31626, 842, 233, 4, 33, "Subsubsection"],
+Cell[31862, 848, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[32249, 861, 231, 4, 33, "Subsubsection"],
+Cell[32483, 867, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[32870, 880, 233, 4, 33, "Subsubsection"],
+Cell[33106, 886, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[33493, 899, 231, 4, 33, "Subsubsection"],
+Cell[33727, 905, 348, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[34112, 918, 233, 4, 33, "Subsubsection"],
+Cell[34348, 924, 347, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[34732, 937, 233, 4, 33, "Subsubsection"],
+Cell[34968, 943, 348, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[35353, 956, 233, 4, 33, "Subsubsection"],
+Cell[35589, 962, 351, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[35977, 975, 233, 4, 33, "Subsubsection"],
+Cell[36213, 981, 351, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[36601, 994, 231, 4, 33, "Subsubsection"],
+Cell[36835, 1000, 348, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[37220, 1013, 233, 4, 33, "Subsubsection"],
+Cell[37456, 1019, 350, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[37843, 1032, 233, 4, 33, "Subsubsection"],
+Cell[38079, 1038, 351, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[38467, 1051, 231, 4, 33, "Subsubsection"],
+Cell[38701, 1057, 347, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[39085, 1070, 231, 4, 33, "Subsubsection"],
+Cell[39319, 1076, 351, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[39707, 1089, 231, 4, 33, "Subsubsection"],
+Cell[39941, 1095, 351, 8, 72, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[40329, 1108, 230, 4, 33, "Subsubsection"],
+Cell[40562, 1114, 349, 8, 72, "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40972, 1129, 315, 4, 64, "Chapter"],
+Cell[41290, 1135, 902, 18, 155, "Text"],
+Cell[CellGroupData[{
+Cell[42217, 1157, 135, 1, 49, "Subsection"],
+Cell[42355, 1160, 824, 13, 59, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
