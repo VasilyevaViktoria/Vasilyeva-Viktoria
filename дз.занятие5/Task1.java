@@ -1,6 +1,7 @@
 package дз.занятие5;
 
 public class Task1 {
+
     public static void main(String[] args) {
 
         StringBuilder builder = new StringBuilder()
@@ -14,6 +15,6 @@ public class Task1 {
     }
 
     public static boolean isPolindrom(StringBuilder builder) {
-        return builder.toString() == builder.reverse().toString();
+        return builder.toString().equals(builder.reverse().toString());
     }
 }
