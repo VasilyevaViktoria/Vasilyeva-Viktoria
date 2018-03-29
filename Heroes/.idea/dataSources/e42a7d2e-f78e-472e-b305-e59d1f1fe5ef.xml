@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="films_database@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="films_database">
+      <ObjectId>16492</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+    </database>
+    <database id="4" parent="1" name="vxlam">
+      <ObjectId>18047</ObjectId>
+    </database>
+    <database id="5" parent="1" name="heroes_repository">
+      <ObjectId>18050</ObjectId>
+    </database>
+    <database id="6" parent="1" name="peacock">
+      <ObjectId>18369</ObjectId>
+    </database>
+    <role id="7" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="9" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-03-27.12:26:28.768</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1322</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="10" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="13" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="14" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <schema id="15" parent="2" name="films_storage">
+      <ObjectId>16493</ObjectId>
+      <IntrospectionTimestamp>2018-03-27.12:26:28.768</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1329</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <sequence id="16" parent="9" name="role_id_seq">
+      <ObjectId>18460</ObjectId>
+      <StateNumber>1322</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="17" parent="9" name="career_id_seq">
+      <ObjectId>18438</ObjectId>
+      <StateNumber>1256</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="18" parent="9" name="career">
+      <ObjectId>18440</ObjectId>
+      <StateNumber>1256</StateNumber>
+    </table>
+    <table id="19" parent="9" name="role">
+      <ObjectId>18462</ObjectId>
+      <StateNumber>1322</StateNumber>
+    </table>
+    <sequence id="20" parent="15" name="career_id_seq">
+      <ObjectId>18200</ObjectId>
+      <StateNumber>1177</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="21" parent="15" name="country_id_seq">
+      <ObjectId>18136</ObjectId>
+      <StateNumber>1172</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="22" parent="15" name="film_id_seq">
+      <ObjectId>18232</ObjectId>
+      <StateNumber>1186</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="23" parent="15" name="film_rating_id_seq">
+      <ObjectId>18348</ObjectId>
+      <StateNumber>1212</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="24" parent="15" name="genre_id_seq">
+      <ObjectId>18126</ObjectId>
+      <StateNumber>1171</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="25" parent="15" name="participant_id_seq">
+      <ObjectId>18427</ObjectId>
+      <StateNumber>1253</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="26" parent="15" name="user_film_id_seq">
+      <ObjectId>18481</ObjectId>
+      <StateNumber>1324</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="27" parent="15" name="user_id_seq">
+      <ObjectId>18509</ObjectId>
+      <StateNumber>1329</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="28" parent="15" name="userrole_id_seq">
+      <ObjectId>18499</ObjectId>
+      <StateNumber>1326</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="29" parent="15" name="career">
+      <ObjectId>18202</ObjectId>
+      <StateNumber>1193</StateNumber>
+    </table>
+    <table id="30" parent="15" name="country">
+      <ObjectId>18138</ObjectId>
+      <StateNumber>1186</StateNumber>
+    </table>
+    <table id="31" parent="15" name="film">
+      <ObjectId>18234</ObjectId>
+      <StateNumber>1324</StateNumber>
+    </table>
+    <table id="32" parent="15" name="film_participant">
+      <ObjectId>18275</ObjectId>
+      <StateNumber>1248</StateNumber>
+    </table>
+    <table id="33" parent="15" name="film_rating">
+      <ObjectId>18350</ObjectId>
+      <StateNumber>1248</StateNumber>
+    </table>
+    <table id="34" parent="15" name="genre">
+      <ObjectId>18128</ObjectId>
+      <StateNumber>1186</StateNumber>
+    </table>
+    <table id="35" parent="15" name="participant">
+      <ObjectId>18429</ObjectId>
+      <StateNumber>1253</StateNumber>
+    </table>
+    <table id="36" parent="15" name="user">
+      <ObjectId>18511</ObjectId>
+      <StateNumber>1329</StateNumber>
+    </table>
+    <table id="37" parent="15" name="user_film">
+      <ObjectId>18483</ObjectId>
+      <StateNumber>1324</StateNumber>
+    </table>
+    <table id="38" parent="15" name="userrole">
+      <ObjectId>18501</ObjectId>
+      <StateNumber>1329</StateNumber>
+    </table>
+    <column id="39" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1256</StateNumber>
+      <DefaultExpression>nextval(&apos;career_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>career_id_seq</SequenceName>
+    </column>
+    <column id="40" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1256</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="41" parent="18" name="career_pkey">
+      <ObjectId>18444</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="42" parent="18" name="career_name_key">
+      <ObjectId>18446</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="18" name="career_pkey">
+      <ObjectId>18445</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>career_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="44" parent="18" name="career_name_key">
+      <ObjectId>18447</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>career_name_key</UnderlyingIndexName>
+    </key>
+    <column id="45" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1322</StateNumber>
+      <DefaultExpression>nextval(&apos;role_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>role_id_seq</SequenceName>
+    </column>
+    <column id="46" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1322</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="47" parent="19" name="role_pkey">
+      <ObjectId>18466</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="19" name="role_pkey">
+      <ObjectId>18467</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="29" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1177</StateNumber>
+      <DefaultExpression>nextval(&apos;career_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>films_storage.career_id_seq</SequenceName>
+    </column>
+    <column id="50" parent="29" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1177</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="51" parent="29" name="career_pkey">
+      <ObjectId>18206</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="52" parent="29" name="career_name_key">
+      <ObjectId>18208</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="29" name="career_pkey">
+      <ObjectId>18207</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>career_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="54" parent="29" name="career_name_key">
+      <ObjectId>18209</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>career_name_key</UnderlyingIndexName>
+    </key>
+    <column id="55" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1172</StateNumber>
+      <DefaultExpression>nextval(&apos;country_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>films_storage.country_id_seq</SequenceName>
+    </column>
+    <column id="56" parent="30" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1172</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="57" parent="30" name="population">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1172</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="58" parent="30" name="count_cinemas">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1172</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="59" parent="30" name="country_pkey">
+      <ObjectId>18142</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="60" parent="30" name="country_name_key">
+      <ObjectId>18144</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="61" parent="30" name="country_pkey">
+      <ObjectId>18143</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>country_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="62" parent="30" name="country_name_key">
+      <ObjectId>18145</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>country_name_key</UnderlyingIndexName>
+    </key>
+    <column id="63" parent="31" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1186</StateNumber>
+      <DefaultExpression>nextval(&apos;film_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>films_storage.film_id_seq</SequenceName>
+    </column>
+    <column id="64" parent="31" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1186</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="65" parent="31" name="duration">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1186</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="66" parent="31" name="premiere">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>1186</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="67" parent="31" name="age_limit">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1186</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="31" name="country_id">
+      <Position>6</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1186</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="69" parent="31" name="description">
+      <Position>9</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>1266</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="70" parent="31" name="film_pkey">
+      <ObjectId>18238</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="71" parent="31" name="film_name_key">
+      <ObjectId>18240</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="31" name="film_pkey">
+      <ObjectId>18239</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>film_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="73" parent="31" name="film_name_key">
+      <ObjectId>18241</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>film_name_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="74" parent="31" name="film_country_id_fkey">
+      <ObjectId>18242</ObjectId>
+      <ColNames>country_id</ColNames>
+      <RefTableId>18138</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>country</RefTableName>
+      <RefKeyName>country_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="75" parent="32" name="participant_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1193</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="76" parent="32" name="film_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1193</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="77" parent="32" name="career_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1193</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="78" parent="32" name="film_participant_pkey">
+      <ObjectId>18278</ObjectId>
+      <ColNames>participant_id
+film_id
+career_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="79" parent="32" name="film_participant_pkey">
+      <ObjectId>18279</ObjectId>
+      <ColNames>participant_id
+film_id
+career_id</ColNames>
+      <UnderlyingIndexName>film_participant_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="80" parent="32" name="film_participant_film_id_fkey">
+      <ObjectId>18285</ObjectId>
+      <ColNames>film_id</ColNames>
+      <RefTableId>18234</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>film</RefTableName>
+      <RefKeyName>film_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="81" parent="32" name="film_participant_career_id_fkey">
+      <ObjectId>18290</ObjectId>
+      <ColNames>career_id</ColNames>
+      <RefTableId>18202</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>career</RefTableName>
+      <RefKeyName>career_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="82" parent="33" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1212</StateNumber>
+      <DefaultExpression>nextval(&apos;film_rating_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>films_storage.film_rating_id_seq</SequenceName>
+    </column>
+    <column id="83" parent="33" name="user_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1212</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="84" parent="33" name="film_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1212</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="85" parent="33" name="stars">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1212</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="86" parent="33" name="date">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1212</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="87" parent="33" name="comment">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
+      <StateNumber>1212</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="88" parent="33" name="film_rating_pkey">
+      <ObjectId>18357</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="33" name="film_rating_pkey">
+      <ObjectId>18358</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>film_rating_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="33" name="film_rating_film_id_fkey">
+      <ObjectId>18364</ObjectId>
+      <ColNames>film_id</ColNames>
+      <RefTableId>18234</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>film</RefTableName>
+      <RefKeyName>film_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="91" parent="34" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1171</StateNumber>
+      <DefaultExpression>nextval(&apos;genre_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>films_storage.genre_id_seq</SequenceName>
+    </column>
+    <column id="92" parent="34" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1171</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="93" parent="34" name="genre_pkey">
+      <ObjectId>18132</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="94" parent="34" name="genre_name_key">
+      <ObjectId>18134</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="34" name="genre_pkey">
+      <ObjectId>18133</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>genre_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="96" parent="34" name="genre_name_key">
+      <ObjectId>18135</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>genre_name_key</UnderlyingIndexName>
+    </key>
+    <column id="97" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1253</StateNumber>
+      <DefaultExpression>nextval(&apos;participant_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>films_storage.participant_id_seq</SequenceName>
+    </column>
+    <column id="98" parent="35" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1253</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="99" parent="35" name="date_of_birth">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>1253</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <index id="100" parent="35" name="participant_pkey">
+      <ObjectId>18433</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="101" parent="35" name="participant_name_key">
+      <ObjectId>18435</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="102" parent="35" name="participant_pkey">
+      <ObjectId>18434</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>participant_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="103" parent="35" name="participant_name_key">
+      <ObjectId>18436</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>participant_name_key</UnderlyingIndexName>
+    </key>
+    <column id="104" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1329</StateNumber>
+      <DefaultExpression>nextval(&apos;user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>films_storage.user_id_seq</SequenceName>
+    </column>
+    <column id="105" parent="36" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1329</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="106" parent="36" name="login">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1329</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="107" parent="36" name="password">
+      <Position>4</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1329</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="108" parent="36" name="userrole_id">
+      <Position>5</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1329</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="109" parent="36" name="user_pkey">
+      <ObjectId>18515</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="110" parent="36" name="user_name_key">
+      <ObjectId>18517</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="111" parent="36" name="user_login_key">
+      <ObjectId>18519</ObjectId>
+      <ColNames>login</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="112" parent="36" name="user_password_key">
+      <ObjectId>18521</ObjectId>
+      <ColNames>password</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="113" parent="36" name="user_pkey">
+      <ObjectId>18516</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="114" parent="36" name="user_name_key">
+      <ObjectId>18518</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>user_name_key</UnderlyingIndexName>
+    </key>
+    <key id="115" parent="36" name="user_login_key">
+      <ObjectId>18520</ObjectId>
+      <ColNames>login</ColNames>
+      <UnderlyingIndexName>user_login_key</UnderlyingIndexName>
+    </key>
+    <key id="116" parent="36" name="user_password_key">
+      <ObjectId>18522</ObjectId>
+      <ColNames>password</ColNames>
+      <UnderlyingIndexName>user_password_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="117" parent="36" name="user_userrole_id_fkey">
+      <ObjectId>18523</ObjectId>
+      <ColNames>userrole_id</ColNames>
+      <RefTableId>18501</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>userrole</RefTableName>
+      <RefKeyName>userrole_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="118" parent="37" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1324</StateNumber>
+      <DefaultExpression>nextval(&apos;user_film_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>films_storage.user_film_id_seq</SequenceName>
+    </column>
+    <column id="119" parent="37" name="user_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1324</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="120" parent="37" name="film_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1324</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="121" parent="37" name="wish">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1324</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="122" parent="37" name="user_film_pkey">
+      <ObjectId>18487</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="123" parent="37" name="user_film_pkey">
+      <ObjectId>18488</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>user_film_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="124" parent="37" name="user_film_film_id_fkey">
+      <ObjectId>18494</ObjectId>
+      <ColNames>film_id</ColNames>
+      <RefTableId>18234</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>film</RefTableName>
+      <RefKeyName>film_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="125" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1326</StateNumber>
+      <DefaultExpression>nextval(&apos;userrole_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>films_storage.userrole_id_seq</SequenceName>
+    </column>
+    <column id="126" parent="38" name="name">
+      <Position>2</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1326</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="127" parent="38" name="userrole_pkey">
+      <ObjectId>18505</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="128" parent="38" name="userrole_pkey">
+      <ObjectId>18506</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>userrole_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="heroes_repository@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+    </database>
+    <database id="3" parent="1" name="heroes_repository">
+      <ObjectId>18050</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="4" parent="1" name="films_database">
+      <ObjectId>16492</ObjectId>
+    </database>
+    <database id="5" parent="1" name="vxlam">
+      <ObjectId>18047</ObjectId>
+    </database>
+    <role id="6" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="8" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-03-25.13:58:51.763</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="9" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="10" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="11" parent="3" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="12" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="13" parent="3" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <schema id="14" parent="3" name="heroes_storage">
+      <ObjectId>18053</ObjectId>
+      <IntrospectionTimestamp>2018-03-25.13:58:51.763</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1128</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <sequence id="15" parent="14" name="ability_id_seq">
+      <ObjectId>18054</ObjectId>
+      <StateNumber>1090</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="16" parent="14" name="hero_id_seq">
+      <ObjectId>18064</ObjectId>
+      <StateNumber>1091</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="17" parent="14" name="ability">
+      <ObjectId>18056</ObjectId>
+      <StateNumber>1091</StateNumber>
+    </table>
+    <table id="18" parent="14" name="hero">
+      <ObjectId>18066</ObjectId>
+      <StateNumber>1128</StateNumber>
+    </table>
+    <column id="19" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1090</StateNumber>
+      <DefaultExpression>nextval(&apos;heroes_storage.ability_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>heroes_storage.ability_id_seq</SequenceName>
+    </column>
+    <column id="20" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1090</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="21" parent="17" name="ability_pkey">
+      <ObjectId>18060</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="22" parent="17" name="ability_name_key">
+      <ObjectId>18062</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="17" name="ability_pkey">
+      <ObjectId>18061</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>ability_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="24" parent="17" name="ability_name_key">
+      <ObjectId>18063</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>ability_name_key</UnderlyingIndexName>
+    </key>
+    <column id="25" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1091</StateNumber>
+      <DefaultExpression>nextval(&apos;heroes_storage.hero_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>heroes_storage.hero_id_seq</SequenceName>
+    </column>
+    <column id="26" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1091</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="27" parent="18" name="identity">
+      <Position>3</Position>
+      <DataType>varchar(128)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1091</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="28" parent="18" name="age">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1091</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="29" parent="18" name="gender">
+      <Position>5</Position>
+      <DataType>varchar(16)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1091</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="18" name="ability_id">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1091</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="31" parent="18" name="hero_pkey">
+      <ObjectId>18070</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="32" parent="18" name="hero_name_key">
+      <ObjectId>18072</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="33" parent="18" name="hero_identity_key">
+      <ObjectId>18074</ObjectId>
+      <ColNames>identity</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="18" name="hero_pkey">
+      <ObjectId>18071</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>hero_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="35" parent="18" name="hero_name_key">
+      <ObjectId>18073</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>hero_name_key</UnderlyingIndexName>
+    </key>
+    <key id="36" parent="18" name="hero_identity_key">
+      <ObjectId>18075</ObjectId>
+      <ColNames>identity</ColNames>
+      <UnderlyingIndexName>hero_identity_key</UnderlyingIndexName>
+    </key>
+    <foreign-key id="37" parent="18" name="hero_ability_id_fkey">
+      <ObjectId>18076</ObjectId>
+      <ColNames>ability_id</ColNames>
+      <RefTableId>18056</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>ability</RefTableName>
+      <RefKeyName>ability_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
